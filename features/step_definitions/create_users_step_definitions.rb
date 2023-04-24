@@ -1,4 +1,4 @@
-Given(/^Se crea (.*) usuarios con template (.*) (.*) tarjetas valida$/) do |number_users, template_file, valid_card|
+Given(/^Se crea (.*) usuarios con template (.*) (.*) tarjetas válidas$/) do |number_users, template_file, valid_card|
 
   cant_user = 0
   begin
