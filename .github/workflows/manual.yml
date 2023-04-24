@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Ruby 2.7.5
+    - name: Set up Ruby 2.7
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7.5
+        ruby-version: 2.7
     - name: Install dependencies
       run: bundle install --jobs 4 --retry 3
     - name: Run tests
