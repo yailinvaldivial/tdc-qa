@@ -32,7 +32,6 @@ module CreateUsersStep
     account_number_usd = '193' + generate_random_number(10, :integer).to_s
 
     #read a file template
-    # data = YAML.load_file("/Users/bcp/RubymineProjects/tdc-qa/tdc_users_yml/tdc_users_templates_yml/#{template_file}")
     data = YAML.load_file("tdc_users_yml/tdc_users_templates_yml/#{template_file}")
 
     #replace a values
@@ -74,8 +73,7 @@ module CreateUsersStep
     puts data.inspect
 
     # Open the YAML file in write mode
-    # File.open("/Users/bcp/RubymineProjects/tdc-qa/tdc_users_yml/tdc_users_generated_yml/tipo_de_cambio#{idc}.yml", 'w') do |file|
-    File.open("tdc_users_yml/tdc_users_generated_ymltipo_de_cambio#{idc}.yml", 'w') do |file|
+    File.open("tdc_users_yml/tdc_users_generated_yml/tipo_de_cambio#{idc}.yml", 'w') do |file|
       # Write the hash to the file as YAML
       file.write(YAML.dump(data))
     end
