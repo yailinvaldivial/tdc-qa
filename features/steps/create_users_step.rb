@@ -74,7 +74,8 @@ module CreateUsersStep
     puts data.inspect
 
     # Open the YAML file in write mode
-    File.open("/Users/bcp/RubymineProjects/tdc-qa/tdc_users_yml/tdc_users_generated_yml/tipo_de_cambio#{idc}.yml", 'w') do |file|
+    # File.open("/Users/bcp/RubymineProjects/tdc-qa/tdc_users_yml/tdc_users_generated_yml/tipo_de_cambio#{idc}.yml", 'w') do |file|
+    File.open("tdc_users_yml/tdc_users_generated_ymltipo_de_cambio#{idc}.yml", 'w') do |file|
       # Write the hash to the file as YAML
       file.write(YAML.dump(data))
     end
