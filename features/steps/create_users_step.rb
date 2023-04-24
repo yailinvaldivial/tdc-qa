@@ -32,7 +32,8 @@ module CreateUsersStep
     account_number_usd = '193' + generate_random_number(10, :integer).to_s
 
     #read a file template
-    data = YAML.load_file("/Users/bcp/RubymineProjects/tdc-qa/tdc_users_yml/tdc_users_templates_yml/#{template_file}")
+    # data = YAML.load_file("/Users/bcp/RubymineProjects/tdc-qa/tdc_users_yml/tdc_users_templates_yml/#{template_file}")
+    data = YAML.load_file("tdc_users_yml/tdc_users_templates_yml/#{template_file}")
 
     #replace a values
     data[0]['name'] = data[0]['name'].gsub('[name]', name)

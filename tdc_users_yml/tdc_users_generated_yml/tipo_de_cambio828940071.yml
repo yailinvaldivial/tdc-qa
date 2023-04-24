@@ -1,0 +1,43 @@
+---
+- name: Tipo De Cambio828940071
+  description: "[Transfer Cuenta Propia] Usuario con 1 TARJETA DÉBITO (455788) 2 cuentas
+    (SOLES,USD)"
+  personality: rea_email
+  data_in_bcp: 'true'
+  card_usage: bcp_card
+  idc: '828940071'
+  cic: '00075689'
+  cod_internacional: "+51"
+  phone_number: '999294650'
+  phone_number_consist: '999294650'
+  uuid: uuid-automatedtest-828940071
+  platform: android
+  version: '8.0'
+  device_token: automated_test_device_token828940071
+  device_type: PERSONAL
+  phone_model: Samsung Note 4 6.0 MARSHMALLOW
+  phone_manufacturer: Samsung
+  email: tdc828940071@mailinator.com
+  email_consist: tdc828940071@mailinator.com
+  password: '999999'
+  cards:
+  - testenv: bcpdesa_simulacionqa
+    number: '4557881156994475'
+    pin4: '9999'
+    expiry_date: 05/27
+    status: '00'
+    accounts:
+    - number: '1932905955584'
+      currency: soles
+      balance: '999999.00'
+      type: CUENTAS DE AHORROS
+      subtype: PRIMERA CUENTA
+      release_date: new
+      status: active
+    - number: '1934694316902'
+      currency: dolares
+      balance: '999999.00'
+      type: CUENTAS DE AHORROS
+      subtype: PRIMERA CUENTA
+      release_date: new
+      status: active
