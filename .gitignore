@@ -1,0 +1,22 @@
+# Created by .ignore support plugin (hsz.mob)
+*.idea*
+node_modules/
+vendor/
+.bundle/
+Gemfile.lock
+.DS_Store
+report/*test*
+rerun.txt
+jmeter.log
+.rakeTasks
+certs/*.p12
+certs/*.cer
+certs/*.pfx
+certs/*.*
+/report/
+/report-portal/
+/certs/
+/devops/
+/allure-report/
+**/analisis_funcional_recarga/
+/artefactos/
