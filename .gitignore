@@ -20,4 +20,4 @@ certs/*.*
 /allure-report/
 **/analisis_funcional_recarga/
 /artefactos/
-/tdc_users_yml/
+/tdc_users_yml/tdc_users_generated_yml
