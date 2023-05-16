@@ -27,10 +27,6 @@ module CreateUsersStep
         response_body = validate_card_method(card_number)
       end until response_body.include? 'green'
     end
-
-    account_number_soles = '193' + generate_random_number(10, :integer).to_s
-    account_number_usd = '193' + generate_random_number(10, :integer).to_s
-
     #read a file template
     data = YAML.load_file("tdc_users_yml/tdc_users_templates_yml/#{template_file}")
 
@@ -64,9 +60,15 @@ module CreateUsersStep
     unless data[0]['cards'][0]['visa_card_token'].nil?
       data[0]['cards'][0]['visa_card_token'] = data[0]['cards'][0]['visa_card_token'].gsub('[visa_card_token]', card_number)
     end
-    data[0]['cards'][0]['accounts'][0]['number'] = data[0]['cards'][0]['accounts'][0]['number'].gsub('[account_number_soles]', account_number_soles)
-    unless data[0]['cards'][0]['accounts'][1].nil?
-      data[0]['cards'][0]['accounts'][1]['number'] = data[0]['cards'][0]['accounts'][1]['number'].gsub('[account_number_usd]', account_number_usd)
+
+    data[0]['cards'][0]['accounts'].each do |account|
+      account_number_soles = '193' + generate_random_number(10, :integer).to_s
+      account_number_usd = '193' + generate_random_number(10, :integer).to_s
+      if account['number'].casecmp? "[account_number_soles]"
+        account['number'] = account['number'].gsub('[account_number_soles]', account_number_soles)
+      elsif account['number'].casecmp? "[account_number_usd]"
+        account['number'] = account['number'].gsub('[account_number_usd]', account_number_usd)
+      end
     end
 
     #print data in console
